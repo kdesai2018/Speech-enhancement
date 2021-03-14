@@ -86,6 +86,9 @@ if __name__ == '__main__':
         dir_save_prediction = args.dir_save_prediction
         #Name noisy sound file to denoise
         audio_input_prediction = args.audio_input_prediction
+        print(f'audio_input_prediction is {audio_input_prediction}')
+        audio_input_prediction = [''.join([a for a in audio_input_prediction])]
+        print(f'audio_input_prediction is {audio_input_prediction}')
         #Name of denoised sound file to save
         audio_output_prediction = args.audio_output_prediction
         # Sample rate to read audio
@@ -101,5 +104,4 @@ if __name__ == '__main__':
         #hop length for fft
         hop_length_fft = args.hop_length_fft
 
-        prediction(weights_path, name_model, audio_dir_prediction, dir_save_prediction, audio_input_prediction,
-        audio_output_prediction, sample_rate, min_duration, frame_length, hop_length_frame, n_fft, hop_length_fft)
+        prediction(weights_path, name_model, audio_dir_prediction, dir_save_prediction, audio_input_prediction,audio_output_prediction, sample_rate, min_duration, frame_length, hop_length_frame, n_fft, hop_length_fft)

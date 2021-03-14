@@ -20,6 +20,8 @@ def audio_files_to_numpy(audio_dir, list_audio_files, sample_rate, frame_length,
     """This function take audio files of a directory and merge them
     in a numpy matrix of size (nb_frame,frame_length) for a sliding window of size hop_length_frame"""
 
+    print(f'audio dir is {audio_dir}')
+    print(f'list audio files is {list_audio_files}')
     list_sound_array = []
 
     for file in list_audio_files:
