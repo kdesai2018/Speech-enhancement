@@ -1,2 +1,5 @@
 .DS_Store
 __pycache__/
+noisy-sawyer-data/
+cleaned-sawyer-data/
+*.zip
